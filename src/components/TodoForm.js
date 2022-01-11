@@ -18,9 +18,10 @@ class TodoForm extends React.Component {
     e.preventDefault();
     this.props.handleAddTodo(this.state.input);
   };
-  handleToggle = () => {
-    console.log("Toggle");
-    this.props.handleToggleTodo(this.state.item);
+
+  handleClearTodos = (e) => {
+    e.preventDefault();
+    this.props.handleClearCompleted();
   };
 
   render() {
@@ -35,7 +36,7 @@ class TodoForm extends React.Component {
           <br />
           <button>Add Todo</button>
           <br />
-          <button onClick={this.handleToggle}>Clear Completed</button>
+          <button onClick={this.handleClearTodos}>Clear Completed</button>
         </form>
       </div>
     );
