@@ -13,7 +13,13 @@ class Todo extends React.Component {
         onClick={this.handleClick}
         className={`task${this.props.task.completed ? " completed" : ""}`}
       >
-        <p>{this.props.task.task}</p>
+        <p
+          style={{
+            textDecoration: this.props.task.completed ? "underline" : "none",
+          }}
+        >
+          {this.props.task.task}
+        </p>
       </div>
     );
   }
