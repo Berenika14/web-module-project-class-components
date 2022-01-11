@@ -15,7 +15,7 @@ class Todo extends React.Component {
       >
         <p
           style={{
-            textDecoration: this.props.task.completed ? "underline" : "none",
+            textDecoration: this.props.task.completed ? "line-through" : "none",
           }}
         >
           {this.props.task.task}
